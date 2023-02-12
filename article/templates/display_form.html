@@ -1,0 +1,41 @@
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  tr{
+    cursor:'pointer';
+  }
+  tr:hover { 
+    background: blue; 
+ }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #ddd;
+  }
+</style>
+
+
+<button onclick="location.href='/article/'">Add new title</button>
+<table>
+  <thead>
+    <div>
+      {%for language in LANGUAGES%}
+        <th>Article title({{ language.0 }})</th>
+      {%endfor%}
+    </div>    
+  </thead>
+  <tbody>
+    {% for article in articles %}
+      <tr onclick="location.href='/article/{{article.id}}'">
+        {% for language in LANGUAGES %}
+          <td>{{ article.title|get_item:language.0 }}</td>
+        {% endfor %}
+      </tr>      
+    {% endfor %}  
+  </tbody>
+</table>
