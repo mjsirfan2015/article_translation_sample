@@ -122,15 +122,15 @@ class ArticleForm(forms.Form):
 The user interface below displays the articles. We use `settings.LANGUAGES` to extract the fields from title field of each article object. On clicking each entry we are redirected to the update page where **text input entries are generated dynamically from** `settings.LANGUAGES`. If instead we click the add button we are redirected to the article creation page which also generates input text fields dynamically.
 
 ##### localhost:8000/
-![Article Display page](readme_assets\image1.png "Article Display page")
+![Article Display page](https://media.githubusercontent.com/media/mjsirfan2015/article_translation_sample/main/readme_assets/image1.png "Article Display page")
 ##### Article Display page
 #
 ##### localhost:8000/article/1
-![Update Existing Article page](readme_assets\image2.png "[Update Existing Article page")
+![Update Existing Article page](https://media.githubusercontent.com/media/mjsirfan2015/article_translation_sample/main/readme_assets/image2.png "[Update Existing Article page")
 ##### Update Existing Article page (Notice the page fetches current entries from entry to be updated)
 #
 ##### localhost:8000/article/
-![Create new Article page](readme_assets\image3.png "Create new Article page")
+![Create new Article page](https://media.githubusercontent.com/media/mjsirfan2015/article_translation_sample/main/readme_assets/image3.png "Create new Article page")
 ##### Create new Article page
 #
 >Also one other possible thing that can be done would be make `settings.LANGUAGES` parameter itself dynamic, by storing the language info in a database rather than settings configuration, so that an admin user can dynamically edit the languages that can be added.
